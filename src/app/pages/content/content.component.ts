@@ -11,8 +11,8 @@ import { dataFake } from '../../data/dataFake';
 })
 export class ContentComponent {
   photoCover:string = ""
-  contentTitle:string = "MINHA NOTICIA"
-  contentDescription:string = "ola mundo"
+  contentTitle:string = ""
+  contentDescription:string = ""
   private id:string | null = "0"
 
   constructor(
