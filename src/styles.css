@@ -9,6 +9,10 @@
   font-family: 'segoe UI';
 }
 
+body {
+  background-color: #111111;
+}
+
       a {
         text-decoration: none;
         color: white;

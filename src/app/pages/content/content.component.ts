@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { dataFake } from '../../data/dataFake';
+import { NoticiasService } from '../../service/noticias.service';
 
 @Component({
   selector: 'app-content',
@@ -16,7 +16,8 @@ export class ContentComponent {
   private id:string | null = "0"
 
   constructor(
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private notService:NoticiasService
   ) {}
 
   ngOnInit(): void {
@@ -24,17 +25,12 @@ export class ContentComponent {
       this.id = value.get("id")
     )
 
-    this.setValuesToComponent(this.id)
+    if(this.id != null) {
+      let result = this.notService.buscar(this.id)
+      this.photoCover = result.photoCover
+      this.contentTitle = result.title
+      this.contentDescription =result.description
+    }
   }
 
-  setValuesToComponent(id:string | null){
-    const result = dataFake.filter(
-      article => article.id == id
-      )[0]
-
-
-        this.contentTitle = result.title
-        this.contentDescription = result.description
-        this.photoCover = result.photoCover
-  }
 }

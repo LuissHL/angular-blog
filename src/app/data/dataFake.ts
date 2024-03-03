@@ -8,7 +8,7 @@ export const dataFake = [
   {
     "id": "2",
     "title": "Nova serie anunciada no Disney +",
-    "description": "ola",
+    "description": "Uma nova série emocionante foi anunciada no Disney+! Prepare-se para uma aventura incrível com personagens cativantes, reviravoltas surpreendentes e muita ação. Fique ligado para mais informações sobre essa empolgante produção que promete conquistar fãs de todas as idades! 🚀🎥 #DisneyPlus #NovaSérie #EmBreve",
     "photoCover": "https://criticalhits.com.br/wp-content/uploads/2021/04/Upcoming-Marvel-TV-Shows-910x474.jpg"
   },
   {
